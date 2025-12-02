@@ -5,8 +5,7 @@ Summary:        A Minimal KDE meta package
 License:        MIT
 Group:          Metapackages
 URL:            https://github.com/anmazzotti/kde-minimal
-Source0:        https://github.com/anmazzotti/kde-minimal/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
-
+Source0:        https://github.com/anmazzotti/kde-minimal/archive/%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  aaa_base
 BuildRequires:  pkgconfig(systemd)
@@ -77,7 +76,7 @@ Requires:       discover6-backend-flatpak
 Requires:       flatpak-kcm6
 
 %install
-install -D -p -m 644 greetd/config.toml     %{buildroot}%{_sysconfdir}/greetd/config.toml
+install -D -p -m 644 %{buildroot}/greetd/config.toml %{_sysconfdir}/greetd/config.toml
 
 %files
 %dir %{_sysconfdir}/greetd/

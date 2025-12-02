@@ -1,0 +1,14 @@
+- Deselect Yast stuff
+- Disable SSH (on Server install)
+
+```txt
+[General]
+GreeterEnvironment=QT_WAYLAND_SHELL_INTEGRATION=layer-shell
+
+[Theme]
+Current=breeze-openSUSE
+CursorTheme=breeze_cursors
+
+[Wayland]
+CompositorCommand=kwin_wayland --no-global-shortcuts --no-lockscreen --locale1
+```

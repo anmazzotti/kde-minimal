@@ -5,11 +5,9 @@ Summary:        A Minimal KDE meta package
 License:        MIT
 Group:          Metapackages
 URL:            https://github.com/anmazzotti/kde-minimal
-Source0:        https://github.com/anmazzotti/kde-minimal/archive/%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  aaa_base
 BuildRequires:  pkgconfig(systemd)
-BuildRequires:  greetd
 
 # Minimal KDE
 
@@ -33,7 +31,6 @@ Requires:       kirigami-addons6
 Requires:       kscreen6
 Requires:       kscreenlocker6
 Requires:       kwin6
-Requires:       libkscreen6-plugin
 Requires:       qt6-positioning-imports
 Requires:       qt6-tools-qdbus
 Requires:       qt6-declarative-imports
@@ -76,8 +73,14 @@ Requires:       flatpak
 Requires:       discover6-backend-flatpak
 Requires:       flatpak-kcm6
 
+%description
+This meta-package aggregates KDE minimal desktop environment packages.
+
+%prep
+%build
+
 %install
-install -D -p -m 644 %{buildroot}/greetd/config.toml %{_sysconfdir}/greetd/config.toml
+install -D -p -m 644 %{_sourcedir}/greetd/config.toml %{buildroot}%{_sysconfdir}/greetd/config.toml
 
 %files
 %dir %{_sysconfdir}/greetd/

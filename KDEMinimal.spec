@@ -9,6 +9,7 @@ Source0:        https://github.com/anmazzotti/kde-minimal/archive/%{version}.tar
 BuildArch:      noarch
 BuildRequires:  aaa_base
 BuildRequires:  pkgconfig(systemd)
+BuildRequires:  greetd
 
 # Minimal KDE
 

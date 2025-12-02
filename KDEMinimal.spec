@@ -1,5 +1,5 @@
 Name:           KDEMinimal
-Version:        0.0.1
+Version:        0.0.4
 Release:        0
 Summary:        A Minimal KDE meta package
 License:        MIT
